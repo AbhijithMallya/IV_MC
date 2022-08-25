@@ -1,0 +1,119 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ADDITION , CODE , READONLY
+    2 00000000         
+    3 00000000         ENTRY
+    4 00000000         START
+    5 00000000 E3A05006        MOV              R5 , #6
+    6 00000004 E3A00000        MOV              R0 , #0
+    7 00000008 E59F1028        LDR              R1 , =VALUE1
+    8 0000000C         
+    9 0000000C         LOOP
+   10 0000000C E0D130B2        LDRH             R3,[R1],#02
+   11 00000010 E0800003        ADD              R0,R0,R3
+   12 00000014 E2555001        SUBS             R5,R5,#1
+   13 00000018 E3550000        CMP              R5,#0
+   14 0000001C 1AFFFFFA        BNE              LOOP
+   15 00000020 E59F4014        LDR              R4,=RESULT
+   16 00000024 E5840000        STR              R0,[R4]
+   17 00000028 EAFFFFFE 
+                       JMP     B                JMP
+   18 0000002C         
+   19 0000002C 11 11 22 
+              22 33 33 
+              AA AA BB 
+              BB CC CC VALUE1  DCW              0X1111 , 0X2222 , 0X3333 , 0XAA
+AA , 0XBBBB , 0XCCCC 
+                                                            ;
+   20 00000038         
+   21 00000038 00000000 
+              00000000         AREA             DATA2 , DATA , READWRITE
+   22 00000000 00000000 
+                       RESULT  DCD              0X0
+   23 00000004                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\add_array.d -o.\add_ar
+ray.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Phil
+ips --predefine="__EVAL SETA 1" --list=.\add_array.lst add_array.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ADDITION 00000000
+
+Symbol: ADDITION
+   Definitions
+      At line 1 in file add_array.asm
+   Uses
+      None
+Comment: ADDITION unused
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 3 in file add_array.asm
+   Uses
+      None
+Comment: ENTRY unused
+JMP 00000028
+
+Symbol: JMP
+   Definitions
+      At line 17 in file add_array.asm
+   Uses
+      At line 17 in file add_array.asm
+Comment: JMP used once
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 9 in file add_array.asm
+   Uses
+      At line 14 in file add_array.asm
+Comment: LOOP used once
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 4 in file add_array.asm
+   Uses
+      None
+Comment: START unused
+VALUE1 0000002C
+
+Symbol: VALUE1
+   Definitions
+      At line 19 in file add_array.asm
+   Uses
+      At line 7 in file add_array.asm
+Comment: VALUE1 used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DATA2 00000000
+
+Symbol: DATA2
+   Definitions
+      At line 21 in file add_array.asm
+   Uses
+      None
+Comment: DATA2 unused
+RESULT 00000000
+
+Symbol: RESULT
+   Definitions
+      At line 22 in file add_array.asm
+   Uses
+      At line 15 in file add_array.asm
+Comment: RESULT used once
+2 symbols
+341 symbols in table
