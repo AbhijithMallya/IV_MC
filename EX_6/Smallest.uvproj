@@ -45,7 +45,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\</OutputDirectory>
-          <OutputName>Square</OutputName>
+          <OutputName>Smallest</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
@@ -406,9 +406,9 @@
           <GroupName>Source Group 1</GroupName>
           <Files>
             <File>
-              <FileName>square.asm</FileName>
+              <FileName>smallest.asm</FileName>
               <FileType>2</FileType>
-              <FilePath>.\square.asm</FilePath>
+              <FilePath>.\smallest.asm</FilePath>
             </File>
           </Files>
         </Group>
