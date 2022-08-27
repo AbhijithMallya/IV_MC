@@ -1,0 +1,2 @@
+Dependencies for Project 'count_01', Target 'Target 1': (DO NOT MODIFY !)
+F (.\count_01.asm)(0x630A196D)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\count_01.lst --xref -o .\count_01.o --depend .\count_01.d)
